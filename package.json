@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-github-pages",
   "description": "The default blueprint for ember-cli addons.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "directories": {
     "doc": "doc",
     "test": "tests"
