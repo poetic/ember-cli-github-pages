@@ -8,9 +8,5 @@ module.exports = {
     return {
       'github-pages:commit': require('./lib/commands/commit')
     };
-  },
-
-  isEnabled: function() {
-    return this.app.env === 'development';
   }
 };

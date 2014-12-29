@@ -10,20 +10,19 @@ addon. It's an addon for addons.
 
 First you need to install ember-cli-github-pages:
 
+ember-cli - 0.1.5 and up
+```sh
+ember install:addon ember-cli-github-pages
+```
+
+ember-cli - 0.1.4 and below
 ```sh
 npm install --save-dev ember-cli-github-pages
+ember generate ember-cli-github-pages
 ```
 
 Then you need to make the sure gh-pages branch is created and the unnecessary
 files are removed:
-
-```sh
-git checkout --orphan gh-pages
-rm -rf `ls -a | grep -vE '.gitignore|.git|node_modules|bower_components|\.\/|\.\.\/'`
-git add . && git commit -m "initial gh-pages commit"
-```
-
-or one long command to copy and paste:
 
 ```sh
 git checkout --orphan gh-pages && rm -rf `ls -a | grep -vE '.gitignore|.git|node_modules|bower_components|\.\/|\.\.\/'` && git add . && git commit -m "initial gh-pages commit"
