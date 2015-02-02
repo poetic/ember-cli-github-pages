@@ -19,7 +19,7 @@ module.exports = {
 
   updateLocationType: function() {
     var search  = "locationType: 'auto'";
-    var replace = "locationType: 'hash";
+    var replace = "locationType: 'hash'";
 
     return this.replaceEnvironment(search, replace);
   },
