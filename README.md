@@ -35,7 +35,7 @@ from(likely master) and run the command to build and commit it.
 
 ```sh
 git checkout master
-ember gh-pages:commit --message "Initial gh-pages release"
+ember github-pages:commit --message "Initial gh-pages release"
 ```
 
 You will still need to push the gh-pages branch up to github using git. Once you
