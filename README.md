@@ -33,9 +33,19 @@ git checkout --orphan gh-pages && rm -rf `ls -a | grep -vE '.gitignore|.git|node
 Once that's done, you can checkout the branch you want to create the gh-page
 from(likely master) and run the command to build and commit it.
 
+Then run ember github-pages:commit --message "some commit message" in order to rebuild gh-pages branch.
+
 ```sh
 git checkout master
 ember github-pages:commit --message "Initial gh-pages release"
+```
+
+## Important
+In order to have any assets you have in your repo load correctly you need to add the following to your `tests/dummy/config/environment.js` file:
+```javascript
+if (environment === 'production') {
+  ENV.baseURL = '/name-of-your-repo'
+}
 ```
 
 You will still need to push the gh-pages branch up to github using git. Once you
@@ -46,7 +56,7 @@ take a few minutes after pushing the code to show up.
 
 - [Jake Craige](http://twitter.com/jakecraige)
 
-[We are very thankful for our many contributers](https://github.com/poetic/ember-cli-github-pages/graphs/contributors)
+[We are very thankful for our many contributors](https://github.com/poetic/ember-cli-github-pages/graphs/contributors)
 
 ## Legal
 
