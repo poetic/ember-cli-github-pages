@@ -10,7 +10,13 @@ addon. It's an addon for addons.
 
 First you need to install ember-cli-github-pages:
 
-ember-cli - 0.1.5 and up
+ember-cli - 0.2.3 or newer
+
+```sh
+ember install ember-cli-github-pages
+```
+
+ember-cli - 0.1.5 to 0.2.3
 ```sh
 ember install:addon ember-cli-github-pages
 ```
