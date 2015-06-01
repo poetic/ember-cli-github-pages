@@ -46,6 +46,21 @@ git checkout master
 ember github-pages:commit --message "Initial gh-pages release"
 ```
 
+### Advanced Usage
+
+You may optionally specify an ember build environment and a branch name as parameters
+
+```sh
+git checkout master
+ember github-pages:commit --message "Initial demo app release" \
+                          --branch="my-demo-app" \
+                          --environment=development
+```
+| Optional Argument | Default Value | Description |
+|-------------------|---------------|-------------|
+| environment       | `production`  | Ember build environment (i.e., `development`, `production`) |
+| branch            | `gh-pages`    | Branch to commit your app to |
+
 ## Important
 In order to have any assets you have in your repo load correctly you need to add the following to your `tests/dummy/config/environment.js` file:
 ```javascript
