@@ -1,5 +1,12 @@
 # ember-cli-github-pages
 
+[![npm version](https://badge.fury.io/js/ember-cli-github-pages.svg)](http://badge.fury.io/js/ember-cli-github-pages)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-cli-github-pages.svg)](http://emberobserver.com/addons/ember-cli-github-pages)
+[![Code Climate](https://codeclimate.com/github/poetic/ember-cli-github-pages/badges/gpa.svg)](https://codeclimate.com/github/poetic/ember-cli-github-pages)
+[![Dependency Status](https://david-dm.org/poetic/ember-cli-github-pages.svg)](https://david-dm.org/poetic/ember-cli-github-pages)
+[![devDependency Status](https://david-dm.org/poetic/ember-cli-github-pages/dev-status.svg)](https://david-dm.org/poetic/ember-cli-github-pages#info=devDependencies)
+
+
 If you need to throw up a quick example of your addon in action, this is the
 addon for you!
 
