@@ -59,9 +59,10 @@ While in general, github repo pages will serve the content in the `gh-pages` bra
 
 * add the `--branch master` option to the `ember github-pages:commit` command
 * make the `gh-pages` branch on your local machine track the master branch on `origin` via the command:
-    ```
-    git branch --set-upstream gh-pages origin/master
-    ```
+
+```sh
+git branch --set-upstream gh-pages origin/master
+```
 
 ### Advanced Usage
 
