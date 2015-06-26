@@ -55,7 +55,13 @@ ember github-pages:commit --message "Initial gh-pages release"
 
 ### A note about Org and User Pages
 
-While in general, github repo pages will serve the content in the `gh-pages` branch, [org and user pages](https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages) serve content in the `master` branch. When using this addon, please remember to add the `--branch master` option to the `ember github-pages:commit` command
+While in general, github repo pages will serve the content in the `gh-pages` branch, [org and user pages](https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages) serve content in the `master` branch. When using this addon to develop a Org or User page, edit your Ember Application on an alternate branch such as `ember`. Once you are ready to build the application and send to GitHub you can either:
+
+* add the `--branch master` option to the `ember github-pages:commit` command
+* make the `gh-pages` branch on your local machine track the master branch on `origin` via the command:
+    ```
+    git branch --set-upstream gh-pages origin/master
+    ```
 
 ### Advanced Usage
 
