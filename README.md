@@ -38,7 +38,7 @@ Then you need to make the sure gh-pages branch is created and the unnecessary
 files are removed:
 
 ```sh
-git checkout --orphan gh-pages && rm -rf `ls -a | grep -vE '\.gitignore|\.git|node_modules|bower_components|(^[.]{1,2}$)'` && git add . && git commit -m "initial gh-pages commit"
+git checkout --orphan gh-pages && rm -rf `ls -a | grep -vE '\.gitignore|\.git|node_modules|bower_components|(^[.]{1,2}$)'` && git add -A && git commit -m "initial gh-pages commit"
 ```
 
 ## Usage
