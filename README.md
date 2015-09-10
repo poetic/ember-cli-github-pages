@@ -46,7 +46,7 @@ Commit these changes `git add -A && git commit -m "Added ember-cli-github-pages 
 Then you need to create the gh-pages branch and remove the unnecessary files:
 
 ```sh
-git checkout --orphan gh-pages && rm -rf `ls -a | grep -vE '\.gitignore|\.git|node_modules|bower_components|(^[.]{1,2}$)'` && git add -A && git commit -m "initial gh-pages commit"
+git checkout --orphan gh-pages && rm -rf `ls -a | grep -vE '\.gitignore|\.git|node_modules|bower_components|(^[.]{1,2}/?$)'` && git add -A && git commit -m "initial gh-pages commit"
 ```
 
 ## Usage
