@@ -72,6 +72,19 @@ While in general, github repo pages will serve the content in the `gh-pages` bra
 git branch --set-upstream gh-pages origin/master
 ```
 
+### A complete Org/User Pages example
+1. Create new emebr project `ember new myBlog`. Here `myBlog` is the name of the project.
+2. `cd` to myBlog and install ember-cli-github-pages: `cd myBlog && ember install ember-cli-github-pages`.
+3. Edit `vi config/environment.js` and modify as mentioned above [Installation & Setup](https://github.com/poetic/ember-cli-github-pages#installation--setup).
+4. Commit the changes: `git add -A && git commit -m "Added ember-cli-github-pages addon  https://github.com/poetic/ember-cli-github-pages"`
+5. Create new branch named `ember` which will store all the ember related code: `git checkout -b ember`
+6. Run the following command as mentioned [above](https://github.com/poetic/ember-cli-github-pages#installation--setup): ```git checkout master && rm -rf `ls -a | grep -vE '\.gitignore|\.git|node_modules|bower_components|(^[.]{1,2}/?$)'` && git add -A && git commit -m "initialises gh-pages(in case of organisation master) commit"```
+7. Switch back to ember branch: `git checkout ember`;
+8. BUild the site using ember-cli-github-pages: `ember github-pages:commit --branch master --message "adds base site"`
+9. Create new Org/User repo on Github and add the origin: `git remote add origin https://github.com/knoxxs/knoxxs.github.io.git`. Here `knoxxs` is my username.
+10. Push the master branch: `git push -u origin master`.
+11. Open `http://knoxxs.github.io/`.
+
 ### Advanced Usage
 
 You may optionally specify an ember build environment and a branch name as parameters
