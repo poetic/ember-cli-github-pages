@@ -91,6 +91,16 @@ You will still need to push the gh-pages branch up to github using git. Once you
 do that you can access the repo at `http://username.github.io/repo-name`. It may
 take a few minutes after pushing the code to show up. 
 
+For ease of use you can add the following to your `package.json`:
+
+```json
+  "scripts": {
+    "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\"; git push; git checkout -"
+  }
+```
+
+And then you can execute `npm run deploy` and it will deploy with a commit message that references the commit ID you deployed from, push to github, and return to where you left off.
+
 ## Authors
 
 - [Jake Craige](http://twitter.com/jakecraige)
