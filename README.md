@@ -1,5 +1,7 @@
 # ember-cli-github-pages
 
+[![Join the chat at https://gitter.im/poetic/ember-cli-github-pages](https://badges.gitter.im/poetic/ember-cli-github-pages.svg)](https://gitter.im/poetic/ember-cli-github-pages?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![npm version](https://badge.fury.io/js/ember-cli-github-pages.svg)](http://badge.fury.io/js/ember-cli-github-pages)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-github-pages.svg)](http://emberobserver.com/addons/ember-cli-github-pages)
 [![Code Climate](https://codeclimate.com/github/poetic/ember-cli-github-pages/badges/gpa.svg)](https://codeclimate.com/github/poetic/ember-cli-github-pages)
