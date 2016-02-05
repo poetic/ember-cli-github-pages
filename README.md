@@ -62,6 +62,9 @@ Then run ember github-pages:commit --message "some commit message" in order to r
 git checkout master
 ember github-pages:commit --message "Initial gh-pages release"
 ```
+### Ember Addons: Add a Demo URL
+
+Once you've created a gh-pages branch, tell the world! Add a `demoURL` key to the `ember-addon` object in your `package.json`. See the `ember-cli` [documention](http://ember-cli.com/extending/#configuring-your-ember-addon-properties) for details.
 
 ### A note about Org and User Pages
 
