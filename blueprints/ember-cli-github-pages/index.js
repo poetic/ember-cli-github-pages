@@ -6,34 +6,28 @@ var fs        = require('fs');
 var writeFile = RSVP.denodeify(fs.writeFile);
 
 module.exports = {
-  description: 'Updates baseURL in config to work on gh-pages',
+  description: 'Updates baseURL in dummy config to work on gh-pages',
   normalizeEntityName: function() { },
 
   afterInstall: function() {
-    return this.updateBaseURL().then(function() {
-      return this.updateLocationType();
-    }.bind(this)).then(function() {
+    return this.updateDummyConfig().then(function() {
       this.ui.writeLine('Updated config/environment.js baseURL and locationType.');
     }.bind(this));
   },
 
-  updateLocationType: function() {
-    var search  = "locationType: 'auto'";
-    var replace = "locationType: 'hash'";
-
-    return this.replaceEnvironment(search, replace);
-  },
-
-  updateBaseURL: function() {
-    var name    = this.project.config('production').modulePrefix;
-    var search  = "baseURL: '/'";
-    var replace = "baseURL: '/" + name + "'";
+  updateDummyConfig: function() {
+    var name = this.project.pkg.name;
+    var search = "  if (environment === 'production') {";
+    var replace = "  if (environment === 'production') {\n    ENV.locationType = 'hash';\n    ENV.baseURL = '/" + name + "';";
 
     return this.replaceEnvironment(search, replace);
   },
 
   replaceEnvironment: function(search, replace) {
-    return this.replaceInFile('config/environment.js', search, replace);
+    var addon = this.project.pkg['ember-addon'];
+    var configPath = addon ? addon.configPath : 'config';
+
+    return this.replaceInFile(configPath + '/environment.js', search, replace);
   },
 
   replaceInFile: function(pathRelativeToProjectRoot, searchTerm, contentsToInsert) {
