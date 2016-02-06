@@ -23,16 +23,14 @@ First you need to install ember-cli-github-pages:
 ember install ember-cli-github-pages
 ```
 
-In order to have any assets you have in your repo load correctly you need to add the following to your `tests/dummy/config/environment.js` file:
-```javascript
-if (environment === 'production') {
-  ENV.baseURL = '/name-of-your-repo'
-}
+Upon install, this addon will modify your 'tests/dummy/config/environment.js'.
+Commit these changes with the following command:
+
+```sh
+git add -A && git commit -m "Added ember-cli-github-pages addon"
 ```
 
-Commit these changes `git add -A && git commit -m "Added ember-cli-github-pages addon"`
-
-Then you need to create the gh-pages branch and remove the unnecessary files:
+Then you need to create the `gh-pages` branch and remove the unnecessary files:
 
 ```sh
 git checkout --orphan gh-pages && rm -rf `ls -a | grep -vE '\.gitignore|\.git|node_modules|bower_components|(^[.]{1,2}/?$)'` && git add -A && git commit -m "initial gh-pages commit"
