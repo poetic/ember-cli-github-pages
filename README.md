@@ -4,7 +4,7 @@
 
 [![npm version](https://badge.fury.io/js/ember-cli-github-pages.svg)](http://badge.fury.io/js/ember-cli-github-pages)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-github-pages.svg)](http://emberobserver.com/addons/ember-cli-github-pages)
-[![Code Climate](https://codeclimate.com/github/poetic/ember-cli-github-pages/badges/gpa.svg)](https://codeclimate.com/github/poetic/ember-cli-github-pages)
+[![Code Climate](https://codeclimate.com/github/poetic/ember-cli-github-pages/badges/gpa.svg)](https://codeclimate.com/github/poetic/ember-cli-github-pages)  
 [![Dependency Status](https://david-dm.org/poetic/ember-cli-github-pages.svg)](https://david-dm.org/poetic/ember-cli-github-pages)
 [![devDependency Status](https://david-dm.org/poetic/ember-cli-github-pages/dev-status.svg)](https://david-dm.org/poetic/ember-cli-github-pages#info=devDependencies)
 
@@ -19,21 +19,8 @@ addon. It's an addon for addons.
 
 First you need to install ember-cli-github-pages:
 
-ember-cli - 0.2.3 or newer
-
 ```sh
 ember install ember-cli-github-pages
-```
-
-ember-cli - 0.1.5 to 0.2.3
-```sh
-ember install:addon ember-cli-github-pages
-```
-
-ember-cli - 0.1.4 and below
-```sh
-npm install --save-dev ember-cli-github-pages
-ember generate ember-cli-github-pages
 ```
 
 In order to have any assets you have in your repo load correctly you need to add the following to your `tests/dummy/config/environment.js` file:
