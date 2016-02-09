@@ -83,7 +83,9 @@ You will still need to push the gh-pages branch up to github using git. Once you
 do that you can access the repo at `http://username.github.io/repo-name`. It may
 take a few minutes after pushing the code to show up. 
 
-### Creating a deploy script with NPM
+## FAQ
+
+#### How can I create an automated deploy script?
 
 For ease of use you can add the following to your `package.json`:
 
@@ -94,6 +96,10 @@ For ease of use you can add the following to your `package.json`:
 ```
 
 And then you can execute `npm run deploy` and it will deploy with a commit message that references the commit ID you deployed from, push to github, and return to where you left off.
+
+#### Some of my assets (images) aren't showing up, what do I do?
+
+This addon creates a production build, which fingerprints resources automatically. If you have dynamic resources in your templates, they will not be fingerprinted, so you need to ignore the fingerprinting for those resources in your ember-cli-build.js file. See the [fingerprinting docs](http://ember-cli.com/user-guide/#fingerprinting-and-cdn-urls).
 
 ## Authors
 
