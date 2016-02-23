@@ -18,7 +18,7 @@ module.exports = {
   updateDummyConfig: function() {
     var name = this.project.pkg.name;
     var search = "  if (environment === 'production') {";
-    var replace = "  if (environment === 'production') {\n    ENV.locationType = 'hash';\n    ENV.baseURL = '/" + name + "';";
+    var replace = "  if (environment === 'production') {\n    ENV.locationType = 'hash';\n    ENV.baseURL = '/" + name + "/';";
 
     return this.replaceEnvironment(search, replace);
   },
