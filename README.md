@@ -90,6 +90,7 @@ ember github-pages:commit --message "Initial demo app release" \
 | environment       | `production`  | Ember build environment (i.e., `development`, `production`) |
 | branch            | `gh-pages`    | Branch to commit your app to |
 | destination       | `.`           | The directory into which the built application should be copied |
+| message           | `new gh-pages version` | The commit message to include with the build, must be wrapped in quotes |
 
 You will still need to push the gh-pages branch up to github using git. Once you
 do that you can access the repo at `http://username.github.io/repo-name`. It may
