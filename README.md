@@ -39,7 +39,7 @@ git checkout --orphan gh-pages && rm -rf `bash -c "ls -a | grep -vE '\.gitignore
 ## Usage
 
 Once that's done, you can checkout the branch you want to create the gh-page
-from(likely master) and run the command to build and commit it.
+from (likely master) and run the command to build and commit it.
 
 Then run ember github-pages:commit --message "some commit message" in order to rebuild gh-pages branch.
 
