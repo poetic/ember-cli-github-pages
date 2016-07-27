@@ -1,24 +1,31 @@
 'use strict';
 
-var RSVP      = require('rsvp');
-var path      = require('path');
-var fs        = require('fs');
+var RSVP = require('rsvp');
+var path = require('path');
+var fs = require('fs');
 var writeFile = RSVP.denodeify(fs.writeFile);
+var VersionChecker = require('ember-cli-version-checker');
 
 module.exports = {
-  description: 'Updates baseURL in dummy config to work on gh-pages',
+  description: 'Updates dummy config to work on gh-pages',
   normalizeEntityName: function() { },
 
   afterInstall: function() {
+    var checker = new VersionChecker(this);
+    var dep = checker.for('ember', 'bower');
+    var urlType = dep.gte('2.7.0-beta.1') ? 'rootURL' : 'baseUrl';
+
+    this.urlType = urlType;
+
     return this.updateDummyConfig().then(function() {
-      this.ui.writeLine('Updated config/environment.js baseURL and locationType.');
+      this.ui.writeLine('Updated config/environment.js ' + urlType + ' and locationType.');
     }.bind(this));
   },
 
   updateDummyConfig: function() {
     var name = this.project.pkg.name;
     var search = "  if (environment === 'production') {";
-    var replace = "  if (environment === 'production') {\n    ENV.locationType = 'hash';\n    ENV.baseURL = '/" + name + "/';";
+    var replace = "  if (environment === 'production') {\n    ENV.locationType = 'hash';\n    ENV." + this.urlType + " = '/" + name + "/';";
 
     return this.replaceEnvironment(search, replace);
   },
@@ -31,7 +38,7 @@ module.exports = {
   },
 
   replaceInFile: function(pathRelativeToProjectRoot, searchTerm, contentsToInsert) {
-    var fullPath          = path.join(this.project.root, pathRelativeToProjectRoot);
+    var fullPath = path.join(this.project.root, pathRelativeToProjectRoot);
     var originalContents  = '';
 
     if (fs.existsSync(fullPath)) {
@@ -39,7 +46,6 @@ module.exports = {
     }
 
     var contentsToWrite = originalContents.replace(searchTerm, contentsToInsert);
-
     var returnValue = {
       path: fullPath,
       originalContents: originalContents,

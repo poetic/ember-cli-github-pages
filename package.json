@@ -42,6 +42,7 @@
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.3",
+    "ember-cli-version-checker": "^1.1.6",
     "rsvp": "^3.0.14"
   },
   "ember-addon": {
