@@ -13,7 +13,7 @@ module.exports = {
   afterInstall: function() {
     var checker = new VersionChecker(this);
     var dep = checker.for('ember-cli', 'npm');
-    var urlType = dep.gte('2.7.0-beta.1') ? 'rootURL' : 'baseUrl';
+    var urlType = dep.satisfies('>= 2.7.0-beta.1') ? 'rootURL' : 'baseUrl';
 
     this.urlType = urlType;
 
