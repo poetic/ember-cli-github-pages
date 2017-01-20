@@ -65,7 +65,7 @@ git branch --set-upstream gh-pages origin/master
 ### A complete Org/User Pages example
 1. Create a new Ember CLI project `ember new myBlog`. Replace `myBlog` with the name of your project.
 2. Go to the newly created project and install this addon: `cd myBlog && ember install ember-cli-github-pages`.
-3. Remove the changes made to `environment.js`, as they are not required for Org/User pages: `git checkout -- config/environment.js`
+3. Remove the changes made to `environment.js`, as they are not required for Org/User pages: `git checkout -- tests/dummy/config/environment.js`
 4. Commit the changes: `git add -A && git commit -m "Added ember-cli-github-pages addon  https://github.com/poetic/ember-cli-github-pages"`
 5. Create a new branch named `ember` which will store all the ember related code: `git checkout -b ember`
 6. Run the following command as mentioned [above](https://github.com/poetic/ember-cli-github-pages#installation--setup): ```git checkout master && rm -rf `ls -a | grep -vE '\.gitignore|\.git|node_modules|bower_components|(^[.]{1,2}/?$)'` && git add -A && git commit -m "initialises gh-pages(in case of organisation master) commit"```
