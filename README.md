@@ -104,7 +104,7 @@ For ease of use you can add the following to your `package.json`:
 
 ```json
   "scripts": {
-    "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\"; git push origin gh-pages:gh-pages; git checkout -"
+    "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages"
   }
 ```
 
