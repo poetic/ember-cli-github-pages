@@ -104,11 +104,11 @@ For ease of use you can add the following to your `package.json`:
 
 ```json
   "scripts": {
-    "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\"; git push; git checkout -"
+    "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages"
   }
 ```
 
-And then you can execute `npm run deploy` and it will deploy with a commit message that references the commit ID you deployed from, push to github, and return to where you left off.
+And then you can execute `npm run deploy` and it will deploy with a commit message that references the commit ID you deployed from, and push that branch to github.
 
 #### Some of my assets (images) aren't showing up, what do I do?
 
