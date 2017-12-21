@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-github-pages",
   "description": "Easily manage gh-pages of your ember-cli addon",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "directories": {
     "doc": "doc",
     "test": "tests"
