@@ -45,8 +45,8 @@
     "emberjs"
   ],
   "dependencies": {
-    "ember-cli-version-checker": "^1.1.6",
-    "rsvp": "^3.0.14"
+    "ember-cli-version-checker": "^2.1.0",
+    "rsvp": "^4.7.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
