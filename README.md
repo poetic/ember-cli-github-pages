@@ -6,7 +6,6 @@
 [![Dependency Status](https://david-dm.org/poetic/ember-cli-github-pages.svg)](https://david-dm.org/poetic/ember-cli-github-pages)
 [![devDependency Status](https://david-dm.org/poetic/ember-cli-github-pages/dev-status.svg)](https://david-dm.org/poetic/ember-cli-github-pages#info=devDependencies)
 
-
 If you need to throw up a quick example of your addon in action, this is the
 addon for you!
 
@@ -45,6 +44,7 @@ Then run ember github-pages:commit --message "some commit message" in order to r
 git checkout master
 ember github-pages:commit --message "Initial gh-pages release"
 ```
+
 ### Ember Addons: Add a Demo URL
 
 Once you've created a gh-pages branch, tell the world! Add a `demoURL` key to the `ember-addon` object in your `package.json`. See the `ember-cli` [documention](http://ember-cli.com/extending/#configuring-your-ember-addon-properties) for details.
@@ -61,6 +61,7 @@ git branch --set-upstream gh-pages origin/master
 ```
 
 ### A complete Org/User Pages example
+
 1. Create a new Ember CLI project `ember new myBlog`. Replace `myBlog` with the name of your project.
 2. Go to the newly created project and install this addon: `cd myBlog && ember install ember-cli-github-pages`.
 3. Remove the changes made to `environment.js`, as they are not required for Org/User pages: `git checkout -- tests/dummy/config/environment.js`
@@ -83,6 +84,7 @@ ember github-pages:commit --message "Initial demo app release" \
                           --branch="my-demo-app" \
                           --environment=development
 ```
+
 | Optional Argument | Default Value | Description |
 |-------------------|---------------|-------------|
 | environment       | `production`  | Ember build environment (i.e., `development`, `production`) |
@@ -92,11 +94,11 @@ ember github-pages:commit --message "Initial demo app release" \
 
 You will still need to push the gh-pages branch up to github using git. Once you
 do that you can access the repo at `http://username.github.io/repo-name`. It may
-take a few minutes after pushing the code to show up. 
+take a few minutes after pushing the code to show up.
 
 ## FAQ
 
-#### How can I create an automated deploy script?
+### How can I create an automated deploy script?
 
 For ease of use you can add the following to your `package.json`:
 
@@ -114,7 +116,7 @@ This addon creates a production build, which fingerprints resources automaticall
 
 ## Authors
 
-- [Jake Craige](http://twitter.com/jakecraige)
+* [Jake Craige](http://twitter.com/jakecraige)
 
 [We are very thankful for our many contributors](https://github.com/poetic/ember-cli-github-pages/graphs/contributors)
 
