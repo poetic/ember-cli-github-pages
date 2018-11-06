@@ -1,8 +1,7 @@
-/* eslint-env node */
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-github-pages',
+  name: require('./package').name,
 
   includedCommands: function() {
     return {
